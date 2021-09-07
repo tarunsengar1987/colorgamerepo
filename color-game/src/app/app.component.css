@@ -1,0 +1,40 @@
+.main-container{
+    padding: 25px 0 !important;
+}
+
+.button{
+    padding: 0 10px;
+    margin: 0 10px;
+    border: 1px solid white;
+    border-radius: 21px;
+}
+
+.highlightButton{
+    border: 2px solid black;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.transparent{
+    background-color:transparent;
+}
+
+td{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.matrix-div{
+    border: 1px solid black;
+    padding: 20px;
+}

@@ -1,0 +1,36 @@
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mb-3" *ngIf="isWin">
+        <input type="button" (click)="restartGame()" value="Restart Game">
+      </div>
+      <div class="col-lg-12">
+        Moves : {{moves}}
+      </div>
+      <div class="col-lg-12">
+        <div class="d-flex">
+          <p> choose color : </p>
+          <div *ngFor="let color of colors">
+            <input type="button" class="button {{color.color}}" [ngClass]="{'highlightButton': color.code === selectedColor}"
+            *ngIf="!color.hidden" (click)="selectColor(color.code)" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <table>
+            <tr *ngFor="let row of size; let i = index" [attr.data-index]="i">
+              <td class="field" *ngFor="let col of row;let j = index" [attr.data-index]="j" (click)="selectCell(i,j)">
+                <div class="matrix-div {{col.color}}" ></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <p>{{ error }}</p>
+        <p *ngIf="isWin"><b>You Won !!!!!!</b></p>
+      </div>
+    </div>
+  </div>
+</div>
